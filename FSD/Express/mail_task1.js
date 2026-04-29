@@ -4,11 +4,11 @@ var trans=nm.createTransport({
     host:"smtp.gmail.com",
     port:465,
     auth:{
-        user:'adityalodhiya111@gmail.com',
-        pass:'mums ypba qxvw pjdq'
+        user:'',
+        pass:''
     }
 })
-var mail={from:"adityalodhiya111@gmail.com",
+var mail={from:"",
     to:"client.onapp1@gmail.com",
     subject:"Purchase order:123456",
     html:"<p>Dear Client<br><br>thank you for ordaring <b style='colour:'red font-size:20px'>Product name:'abc'</b>from our site<br><br><b style='colour:'red font-size:20px'>Dilevry date:...</b></p>",
