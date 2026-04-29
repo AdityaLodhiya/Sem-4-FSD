@@ -4,12 +4,12 @@ var trans=nm.createTransport({
     host:"smtp.gmail.com",
     port:465,
     auth:{
-        user:'adityalodhiya111@gmail.com',
-        pass:'mums ypba qxvw pjdq'
+        user:'',
+        pass:''
     }
 })
-var mail={from:"adityalodhiya111@gmail.com",
-    to:"gaurav10806@gmail.com",
+var mail={from:"",
+    to:"",
     subject:"Test Mail",
     //text:'Hello'
     //html:"<h1>Hello HTML Mail</h1>",
