@@ -1,0 +1,13 @@
+[{"_id": 1,"name": "Eric","age": 30,"position": "Full Stack Developer","salary": 60000},
+
+{"_id": 2,"name": "Erica","age": 35,"position": "Intern","salary": 8000},
+
+{"_id": 3,"name": "Erical","age": 40,"position": "UX/UI Designer","salary": 56000},
+
+{"_id": 4,"name": "treric7","age": 37,"position": "Team Leader","salary": 85000},
+
+{"_id": 5,"name": "Eliza","age": 25,"position": "Software Developer","salary": 45000},
+
+{"_id": 6,"name": "Trian","age": 29,"position": "Data Scientist","salary": 75000},
+
+{"_id": 7,"name": "Elizan","age": 25,"position": "Full Stack Developer","salary": 49000}]

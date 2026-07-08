@@ -1,0 +1,46 @@
+Task 1
+
+Task2
+
+    1.db.product.find({cat:'mobile'},{price:1,brand:1})
+    2.db.product.updateMany({brand:'samsung'},{$inc:{price:1000}})
+    3.db.product.updateMany({brand:'vivo'},{$set:{qty:10}})
+    4.db.product.find({$or:[{brand:'oppo'},{brand:'vivo'}]},{price:1})
+    5.db.product.find({price:{$lt:8000,$gte:30000}},{brand:1,car:1})
+
+Task3
+    1.db.task3.updateMany({age:20},{$set:{name:'JJJ',age:20}})
+    2. db.product.find({$or:[{name:'YYY'},{name:'SSS'}],{age:1,name:1,_id=0}})
+
+----------------------
+sql- no sql
+
+Task-1
+db.people.updatemany({},{$set:{'joiningDate':18/7/2026}})
+db.people.updatemany({},{$unset:{'joiningDATE'}})
+db.prople.find({'status'='ph'},{'age':1,'name':1,_id:0})
+db.people.find({'status':{$neq:'PH}},{})
+db.people.find({},{'name':1})
+--------------------
+Aggregation
+
+task-2
+1.db.orders.aggregate([{ $group: { _id: '$category', avgmark: { $avg: '$amount' } } }, { $sort: { avgmark: -1 } }, { $project: { Cat: '$_id', Avg: '$avgmark' } }])
+
+2.db.orders.aggregate([{ $group: { _id: '$category', sales: { $sum: '$amount' } } }, { $sort: { sales: -1 } }, { $project: { Cat: '$_id', Sales: '$sales' } }])
+------------------------
+Indexing
+
+task-1
+    1.  db.data.createIndex({age:1})
+        db.data.find({age:{$gt:20}}).explain('executionStats')
+
+    2.  db.data.createIndex({name:1,age:1})
+        db.data.find({age:{$gt:20},name:'XYZ'}).explain('executionStats')
+    
+    3.  db.data.find({name:'XYZ'}).explain('executionStats')
+
+    4.  db.data.createIndex({marks:1},{partialFilterExpression:{marks:{$gt:80}}})
+        db.data.find({marks:{$gt:80}}).explain('executionStats')
+        
+    5.  db.data.find({marks:{$gt:70}}).explain('executionStats')
